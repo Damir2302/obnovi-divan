@@ -1,0 +1,75 @@
+.breadcrumbs {
+    padding-bottom: 30px;
+
+    @include breakpoint(md) {
+        padding-bottom: 30px;
+    }
+
+    @include breakpoint(lg) {
+        padding-bottom: 40px;
+    }
+
+    @include breakpoint(xl) {
+        padding-bottom: 50px;
+    }
+}
+
+.breadcrumbs-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.breadcrumbs-item {
+    margin-right: 3px;
+    display: flex;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    color: gray;
+}
+
+.breadcrumbs-item:first-child {
+    color: green;
+}
+
+.breadcrumbs-item:last-child {
+    cursor: default;
+}
+
+.breadcrumbs-item:not(:first-child)::before {
+    content: '/';
+    margin-right: 3px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    color: gray;
+    cursor: default;
+}
+
+.breadcrumbs-item a {
+
+    @include breakpointMax(lg) {
+        max-width: 130px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+.breadcrumbs-item span {
+    display: inline-block;
+    max-width: 195px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+// .breadcrumbs-separator {
+//     margin: 0 3px;
+//     font-weight: 700;
+//     font-size: 14px;
+//     line-height: 150%;
+//     color: $gray;
+//     cursor: default;
+// }
