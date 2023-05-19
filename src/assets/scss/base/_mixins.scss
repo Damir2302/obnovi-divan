@@ -1,4 +1,4 @@
-$s: 360px;
+$s: 375px;
 $xs: 425px;
 $sm: 576px;
 $md: 744px;
@@ -68,6 +68,33 @@ $hd: 1440px;
     @media (max-width: $point - 1px) { @content ; }
 }
 
+@mixin breakpointAnd($point1, $point2) {
+    @if $point1 {
+        @media (min-width: $point1) and (max-width: $point2 - 1px) { @content ; }
+    }
+    @else if $point == xs {
+        @media (max-width: $xs - 1px) { @content ; }
+    }
+    @else if $point == sm {
+        @media (max-width: $sm - 1px) { @content ; }
+    }
+    @else if $point == md {
+        @media (max-width: $md - 1px) { @content ; }
+    }
+    @else if $point == lg {
+        @media (max-width: $lg - 1px) { @content ; }
+    }
+    @else if $point == bg {
+        @media (max-width: $bg - 1px) { @content ; }
+    }
+    @else if $point == xl {
+        @media (max-width: $xl - 1px) { @content ; }
+    }
+    @else if $point == hd {
+        @media (max-width: $hd - 1px) { @content ; }
+    }
+}
+
 @mixin textLimit($val) {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -75,66 +102,4 @@ $hd: 1440px;
     -webkit-line-clamp: $val;
     line-clamp: $val;
     -webkit-box-orient: vertical;
-}
-
-@mixin flex-items($percent) {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -5px;
-
-    .flex-child {
-        padding: 5px;
-        flex: 0 0 $percent;
-    }
-    @include breakpoint(lg) {
-        margin: -10px;
-
-        .flex-child {
-            padding: 10px;
-            flex: 0 0 $percent;
-        }
-    }
-
-    //@include breakpoint(hd) {
-    //  margin: -20px;
-    //
-    //  .flex-child {
-    //    padding: 20px;
-    //    flex-basis: $percent;
-    //  }
-    //}
-}
-
-
-
-%photo {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-@mixin proportional_picture($width, $height) {
-    padding-bottom: calc($height * 100% / $width);
-    height: 0;
-}
-
-@mixin proportional_picture50($width, $height) {
-    padding-bottom: calc($height * 50% / $width);
-    height: 0;
-}
-
-@mixin section_margin {
-    margin-top: 30px;
-
-    @include breakpoint(md) {
-        margin-top: 35px;
-    }
-
-    @include breakpoint(lg) {
-        margin-top: 40px;
-    }
-
-    @include breakpoint(hd) {
-        margin-top: 50px;
-    }
 }

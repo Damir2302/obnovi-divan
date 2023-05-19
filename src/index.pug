@@ -1,7 +1,22 @@
 ---
 title: ОбновиДиван | Главная
+bodyClass: main-page
 ---
 
 extends includes/_page
 
 block main
+
+    section.section-hero(style="background-image: url(assets/images/main-hero.png)")
+        
+        .hero
+
+            .container
+
+                .hero-title
+                    h1 Реставрация МЯГКОЙ МЕБЕЛИ В МОСКВЕ
+                .hero-subtitle Собственная фабрика по перетяжке и реставрации мягкой мебели<br>Профильные специалисты с опытом более 13 лет<br>Закажите бесплатный выезд дизайнера
+                .hero-buttons
+                    .hero-btn.btn-style.btn-style--fill-white
+                        a(href="portfolio.html") Смотреть портфолио
+                    .hero-btn.btn-style.btn-style--border-yellow(data-src="#popup-calc" data-fancybox) Узнать стоимость

@@ -1,0 +1,373 @@
+.header {
+    padding: 22px 16px 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all .4s ease;
+    z-index: 9;
+
+    @include breakpoint(lg) {
+        padding: 0;
+        position: static;
+    }
+
+    @include breakpoint(xl) {
+        padding: 30px 50px 50px;
+        position: fixed;
+    }
+}
+
+.header-fixed {
+    
+    @include breakpointMax(lg) {
+        padding: 10px 16px;
+        background: rgba(0, 0, 0, 0.8);
+        top: -15%;
+    }
+
+    @include breakpoint(xl) {
+        padding: 10px 50px;
+        top: -15%;
+    }
+}
+
+.header-backscroll {
+    
+    @include breakpointMax(lg) {
+        top: 0;
+    }
+
+    @include breakpoint(xl) {
+        background: rgba(0, 0, 0, 0.8);
+        top: 0;
+    }
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint(lg) {
+        position: relative;
+    }
+}
+
+.header__inner::before {
+
+    @include breakpointAnd($lg, $xl) {
+        content: '';
+        background: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        top: -15%;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 83px;
+        transition: all .4s ease;
+        z-index: 1;
+    }
+}
+
+.header-fixed .header__inner::before {
+
+    @include breakpointAnd($lg, $xl) {
+        top: -15%;
+    }
+}
+
+.header-backscroll .header__inner::before {
+
+    @include breakpointAnd($lg, $xl) {
+        top: 0;
+    }
+}
+
+.header__logo {
+    width: 74px;
+    height: 64px;
+
+    @include breakpoint(lg) {
+        margin: 50px 30px 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 84px;
+        height: 73px;
+        box-sizing: content-box;
+        transition: all .4s ease;
+        z-index: 8;
+    }
+
+    @include breakpoint(xl) {
+        margin: 0;
+        position: static;
+    }
+}
+
+.header-fixed .header__logo {
+
+    @include breakpointAnd($lg, $xl) {
+        margin: 5px 30px;
+        top: -15%;
+    }
+}
+
+.header-backscroll .header__logo {
+
+    @include breakpointAnd($lg, $xl) {
+        top: 0;
+    }
+}
+
+.nav {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    height: 100%;
+    overflow-y: scroll;
+    transition: all .4s ease;
+    z-index: 9;
+
+    @include breakpointMax(lg) {
+        left: -100%;
+    }
+
+    @include breakpoint(lg) {
+        padding-top: 150px;
+        right: -100%;
+    }
+
+    @include breakpoint(xl) {
+        padding-top: 0;
+        background: none;
+        position: static;
+        display: block;
+        width: auto;
+        height: auto;
+        overflow: unset;
+    }
+
+    @include breakpoint(hd) {
+        position: absolute;
+        top: calc(50% - (27px / 2));
+        left: 0;
+        width: 100%;
+    }
+}
+
+.nav.active {
+    
+    @include breakpointMax(lg) {
+        left: 0;
+    }
+
+    @include breakpoint(lg) {
+        right: 0;
+    }
+}
+
+.nav__logo {
+    padding: 42px 18px 34px;
+    width: 84px;
+    height: 73px;
+    box-sizing: content-box;
+
+    @include breakpoint(lg) {
+        display: none;
+    }
+}
+
+.header__nav {
+    margin-bottom: 75px;
+
+    @include breakpoint(xl) {
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.header__nav-link {
+    padding: 15px 16px;
+    font-size: 30px;
+    line-height: 120%;
+    text-transform: uppercase;
+    border-bottom: 1px solid #E2E2E2;
+
+    @include breakpoint(lg) {
+        text-align: center;
+    }
+
+    @include breakpoint(xl) {
+        padding: 0;
+        font-family: $playfair;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 27px;
+        color: #FFFFFF;
+        text-align: unset;
+        text-transform: unset;
+        border-bottom: none;
+    }
+}
+
+.header__nav-link ~ .header__nav-link {
+
+    @include breakpoint(xl) {
+        margin-left: 40px;
+    }
+
+    @include breakpoint(hd) {
+        margin-left: 77px;
+    }
+}
+
+.header__contacts.tablet {
+    margin-top: auto;
+    margin-left: 20px;
+    margin-bottom: 60px;
+    width: 245px;
+
+    @include breakpoint(xl) {
+        display: none;
+    }
+}
+
+.header__contacts:not(.tablet) {
+    display: none;
+    
+    @include breakpoint(lg) {
+        margin: 0;
+        position: fixed;
+        top: 58px;
+        left: calc(50% - (245px / 2));
+        display: block;
+        width: 245px;
+        color: #fff;
+        transition: all .4s ease;
+        z-index: 1;
+    }
+
+    @include breakpoint(xl) {
+        position: static;
+    }
+}
+
+.header-fixed .header__contacts:not(.tablet) {
+
+    @include breakpointAnd($lg, $xl) {
+        top: -15%;
+    }
+}
+
+.header-backscroll .header__contacts:not(.tablet) {
+
+    @include breakpointAnd($lg, $xl) {
+        top: 6px;
+    }
+}
+
+.header__contacts-phone {
+    font-size: 32px;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+
+.header__contacts-whatsapp {
+    margin-top: 7px;
+    font-family: $roboto;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+}
+
+.header__contacts-whatsapp span {
+    color: #CEB011;
+}
+
+.header__contacts-callback {
+    margin-top: 30px;
+    padding: 20px 47.5px;
+    display: inline-block;
+}
+
+.header__menu {
+    cursor: pointer;
+
+    @include breakpoint(lg) {
+        margin: 50px 30px 60px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        box-sizing: content-box;
+        transition: all .4s ease;
+        z-index: 9;
+    }
+
+    @include breakpoint(xl) {
+        display: none;
+    }
+}
+
+.header__menu::before {
+    content: '';
+    background: url('../images/menu.svg') no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: inline-block;
+    width: 31px;
+    height: 14px;
+}
+
+.header__menu.active {
+
+    @include breakpoint(lg) {
+        margin: 0!important;
+    }
+}
+
+.header__menu.active::before {
+    background: url('../images/x.svg') no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    width: 50px;
+    height: 30px;
+
+    @include breakpoint(lg) {
+        top: 60px;
+        right: 130px;
+        opacity: 0;
+        animation-name: menu;
+        animation-duration: .2s;
+        animation-delay: .4s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes menu {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.header-fixed .header__menu {
+
+    @include breakpointAnd($lg, $xl) {
+        margin: 32px 30px;
+        top: -10%;
+    }
+}
+
+.header-backscroll .header__menu {
+
+    @include breakpointAnd($lg, $xl) {
+        top: 0;
+    }
+}

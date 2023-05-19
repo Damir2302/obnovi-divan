@@ -1,0 +1,11 @@
+.main-page .hero {
+    height: calc(max(100vh, 770px));
+
+    @include breakpoint(lg) {
+        height: calc(max(100vh, 835px));
+    }
+}
+
+.main-page .hero-title h1 {
+    max-width: 685px;
+}

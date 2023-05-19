@@ -17,7 +17,7 @@ html(lang="ru")
 
     body(class= bodyClass ? bodyClass : '')
 
-        #page
+        #page(class= pageClass ? pageClass : '')
 
             // Header::Start
             block header
@@ -33,6 +33,80 @@ html(lang="ru")
             block footer
                 include _footer
             // Footer::End
+
+        // Popup-Callback::Start
+        .popup-form#popup-callback
+
+            .popup-form__title Обратный звонок
+
+            .form
+                form(action="/")
+
+                    .p-form__container
+
+                        .p-form__main
+
+                            .p-form-row
+                                .input-style
+                                    input(type="text" placeholder="Представьтесь" required autocomplete="off")
+
+                            .p-form-row
+                                .input-style
+                                    input(type="tel" placeholder="+7" required autocomplete="off")
+
+                            .agreement
+                                .agreement-text Согласен с<a href="#"> политикой обработки персональных данных</a>
+
+                            button.btn-style.btn-style--fill-gray(type="submit" tabindex="0") Отправить данные
+        // Popup-Callback::End
+
+        // Popup-Callback::Start
+        .popup-form#popup-calc
+
+            .popup-form__title Стоимость по фото
+
+            .form
+                form(action="/")
+
+                    .p-form__container
+
+                        .p-form__main
+
+                            .p-form-row
+                                .input-style
+                                    input(type="text" placeholder="Представьтесь" required autocomplete="off")
+
+                            .p-form-row
+                                .input-style
+                                    input(type="tel" placeholder="+7" required autocomplete="off")
+
+                            .p-form-row
+                                .input-style
+                                    input(type="email" placeholder="Введите ваш E-mail" required autocomplete="off")
+
+                            .agreement
+                                .agreement-text Согласен с<a href="#"> политикой обработки персональных данных</a>
+
+                        .p-form__right
+
+                            .input-textarea
+                                textarea(placeholder="Введите текст")
+
+                            .p-form__buttons
+                                .file-upload.btn-style.btn-style--border-black(type="submit" tabindex="0")
+                                    input(type="file" id="fileUpload" name="" accept=".png, .jpg, .jpeg, .bmp")
+                                    label(for="fileUpload" id="fileUploadLabel")
+                                        span Прикрепить фото
+                                button.btn-style.btn-style--fill-gray(type="submit" tabindex="0") Отправить данные
+        // Popup-Callback::End
+
+        // Popup-Success::Start
+        .popup-form#popup-success
+
+            .popup-form__title Спасибо
+            p.popup-form__text Ваши данные успешно отправлены!
+            button.btn-style.btn-style--fill-gray(type="submit" tabindex="0") Вернуться на сайт
+        // Popup-Success::End
 
         // Scripts::Start
         include _loadScripts

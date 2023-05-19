@@ -3,18 +3,40 @@ block header
 
     header#header.header 
 
-        .container
+        .header__inner
 
             .header__logo
-                img(src="assets/images/logo.svg", alt="logo")
+                a(href="/")
+                    img(src="assets/images/logo.svg", alt="logo")
 
-            nav.nav
-                .nav__link О фабрике
-                .nav__link Услуги
-                .nav__link Цены
-                .nav__link Портфолио
-                .nav__link Контакты
+            nav.nav#nav
+                .nav__logo
+                    a(href="/") 
+                        img(src="assets/images/logo-black.svg", alt="logo")
 
-            .header__phone
-                a(href="tel:+ 7 (499) 714-69-26") + 7 (499) 714-69-26
-                p whats app официальный аккаунт
+                .header__nav
+                    .header__nav-link
+                        a(href="about.html") О фабрике
+                    .header__nav-link
+                        a(href="services.html") Услуги
+                    .header__nav-link
+                        a(href="prices.html") Цены
+                    .header__nav-link
+                        a(href="portfolio.html") Портфолио
+                    .header__nav-link
+                        a(href="contacts.html") Контакты
+
+                .header__contacts.tablet
+                    .header__contacts-phone
+                        a(href="tel:+ 7 (499) 714-69-26") + 7 (499) 714-69-26
+                    .header__contacts-whatsapp
+                        a(href="https://wa.me/79774220540") <span>whats app</span> официальный аккаунт
+                    .header__contacts-callback.btn-style.btn-style--fill-gray(data-src="#popup-callback" data-fancybox) Заказать звонок
+
+            .header__menu#menu
+
+            .header__contacts
+                    .header__contacts-phone
+                        a(href="tel:+ 7 (499) 714-69-26") + 7 (499) 714-69-26
+                    .header__contacts-whatsapp
+                        a(href="https://wa.me/79774220540") <span>whats app</span> официальный аккаунт
