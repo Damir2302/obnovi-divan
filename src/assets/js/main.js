@@ -27,4 +27,13 @@ $(document).ready(function() {
         }
         lastScrollTop = currentScroll
     })
+
+    $(function(){
+      $('.beforeAfter').beforeAfter({
+        hoverOpacity: 1,
+        separatorColor:'#F9E328',
+        bulletColor:'#F9E328',
+        arrowColor:'#4F4E53'
+      });
+    });
 })

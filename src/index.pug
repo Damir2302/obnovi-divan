@@ -20,3 +20,229 @@ block main
                     .hero-btn.btn-style.btn-style--fill-white
                         a(href="portfolio.html") Смотреть портфолио
                     .hero-btn.btn-style.btn-style--border-yellow(data-src="#popup-calc" data-fancybox) Узнать стоимость
+
+        .main
+
+            .container
+
+                .main__inner
+
+                    .main__item
+                        .main__item-icon
+                            img(src="assets/images/sofa.svg", alt="icon")
+                        .main__label
+                            .main__label-title Диваны
+                            .main__label-price от 5 000 ₽
+
+                    .main__item
+                        .main__item-icon
+                            img(src="assets/images/skin_arm.svg", alt="icon")
+                        .main__label
+                            .main__label-title Кресла
+                            .main__label-price от 3 500 ₽
+
+                    .main__item
+                        .main__item-icon
+                            img(src="assets/images/chair.svg", alt="icon")
+                        .main__label
+                            .main__label-title Стулья
+                            .main__label-price от 800 ₽
+
+                    .main__item
+                        .main__item-icon
+                            img(src="assets/images/bed.svg", alt="icon")
+                        .main__label
+                            .main__label-title Кровати
+                            .main__label-price от 5 000 ₽
+
+                    .main__item
+                        .main__item-icon
+                            img(src="assets/images/cafe.svg", alt="icon")
+                        .main__label
+                            .main__label-title Мебель в кафе
+                            .main__label-price от 5 000 ₽
+
+    section.section-cost
+
+         .container
+
+            h2.cost-title.section-title Узнайте стоимость реставрации вашей мебели
+
+            .cost__blocks
+
+                .cost__item
+                    .cost__item-wrap
+                        .cost__item-title Бесплатный замер
+                        .cost__item-icon
+                            img(src="assets/images/ruler.svg", alt="icon")
+                    .cost__item-text Дизайнер приедет к вам, согласует материалы исполнения и зафиксирует цену. Работа по прозрачному договору!
+
+                .cost__item
+                    .cost__item-wrap
+                        .cost__item-title Сами заберем мебель
+                        .cost__item-icon
+                            img(src="assets/images/man.svg", alt="icon")
+                    .cost__item-text А также, сами привезем ее вам обратно домой. Уже отреставрированную и свежую.
+       
+                .cost__item
+                    .cost__item-wrap
+                        .cost__item-title 3 года гарантии
+                        .cost__item-icon
+                            img(src="assets/images/roll.svg", alt="icon")
+                    .cost__item-text На все ткани, механизмы и материалы, используемые в реставрации, распространяется наша гарантия!
+
+            .cost__banner
+                .cost__banner-wrap
+                    .cost__banner-title В среднем весь комплекс работ занимает <span>всего 9 дней!</span>
+                    .cost__banner-text Поможем с выбором материала и предложим варианты перетяжки обивки и реставрации мебели на месте.
+                .cost__banner-contacts
+                    a(href="tel:+ 7 (499) 714-69-26") + 7 (499) 714-69-26
+                    .btn-style.btn-style--fill-yellow(data-src="#popup-calc" data-fancybox) Рассчитать стоимость
+
+    section.section-works   
+
+        h2.works-title.section-title Примеры работ
+        .works-subtitle Любимая мебель заслуживает второго шанса. Посмотрите, как она преображается и обретает вторую жизнь в наших руках
+
+        .works
+
+            .works__label
+                .works__label-name Было
+                .works__label-name Стало
+
+            .swiper
+
+                .swiper-wrapper
+
+                    .works__slide.swiper-slide.beforeAfter
+                        img(src="assets/images/img_1.1.png", alt="img")
+                        img(src="assets/images/img_1.2.png", alt="img")
+
+                    .works__slide.swiper-slide.beforeAfter
+                        img(src="assets/images/img_2.1.png", alt="img")
+                        img(src="assets/images/img_2.2.png", alt="img")
+
+                    .works__slide.swiper-slide.beforeAfter
+                        img(src="assets/images/img_1.1.png", alt="img")
+                        img(src="assets/images/img_1.2.png", alt="img")
+
+                    .works__slide.swiper-slide.beforeAfter
+                        img(src="assets/images/img_2.1.png", alt="img")
+                        img(src="assets/images/img_2.2.png", alt="img")
+            
+            .slider-navigation
+                .slider-arrow.slider-arrow--left
+                .slider-arrow.slider-arrow--right
+
+            .works__link
+                a.btn-style.btn-style--fill-white(href="#") Смотреть все работы
+
+    section.section-request
+
+        .container
+
+            h2.request-title.section-title более 5 000 образцов материалов
+            .request-subtitle Оставьте заявку на консультацию, наши специалисты свяжутся с вами. Мы расскажем про материалы, оборудование и способы перетяжки, которые используем в работе.
+
+            .request
+
+                form
+
+                    .request__form
+                        
+                        .request__input
+                            input(type="text" placeholder="Ваше имя")
+                        
+                        .request__input
+                            input(type="tel" placeholder="Телефон")
+                        
+                        .request__submit.btn-style.btn-style--fill-yellow Отправить заявку
+
+                        .request__agreement Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных.
+
+            .request-features
+
+                .r-features__item
+                    .r-features__icon
+                        img(src="assets/images/icon-materials.svg", alt="icon")
+                    .r-features__title материалы
+                    .r-features__text Используем все виды кожи, которые представлены на Российском рынке.  Доступны любые эксклюзивные ткани (Испания, Италия, Бельгия).
+
+                .r-features__item
+                    .r-features__icon
+                        img(src="assets/images/icon-team.svg", alt="icon")
+                    .r-features__title команда
+                    .r-features__text В наличии все виды кожи, которые представлены на Российском рынке.  Доступны любые эксклюзивные ткани (Испания, Италия, Бельгия).
+
+                .r-features__item
+                    .r-features__icon
+                        img(src="assets/images/icon-filler.svg", alt="icon")
+                    .r-features__title наполнители
+                    .r-features__text Используем высокоэластичный пенополиуретан (HR), который используют мировые мебельные бренды.
+
+                .r-features__item
+                    .r-features__icon
+                        img(src="assets/images/icon-quality.svg", alt="icon")
+                    .r-features__title Качество
+                    .r-features__text Производим бесплатную замену верхнего слоя наполнения, усиление конструкции и обслуживание всех механизмов.
+
+                .r-features__item
+                    .r-features__icon
+                        img(src="assets/images/icon-gears.svg", alt="icon")
+                    .r-features__title Автоматизация
+                    .r-features__text В работе мы используем специальное оборудование для резки наполнителя, что позволяет сохранить фабричное качество.
+
+                .r-features__item
+                    .r-features__icon
+                        img(src="assets/images/icon-sewing-machine.svg", alt="icon")
+                    .r-features__title мощности
+                    .r-features__text Площадь собственного производства - 600 кв. м.В работе используем только швейные машинки Durkopp Adler.
+
+    section.section-options
+
+        .container
+
+            h2.options-title.section-title Наши услуги
+            .options-subtitle Любимая мебель заслуживает второго шанса. Посмотрите, как она преображается и обретает вторую жизнь в наших руках
+
+            .options 
+
+                .options__item
+                    .options__item-title Обивка мягкой мебели
+                    .options__item-img
+                        img(src="assets/images/v-img-1.png", alt="img")
+
+                .options__item
+                    .options__item-title перетяжка мягкой мебели
+                    .options__item-img
+                        img(src="assets/images/v-img-2.png", alt="img")
+
+                .options__item
+                    .options__item-title изготовление стеновых панелей
+                    .options__item-img
+                        img(src="assets/images/v-img-3.png", alt="img")
+
+                .options__item
+                    .options__item-title Реставрация мебели
+                    .options__item-img
+                        img(src="assets/images/v-img-4.png", alt="img")
+
+                .options__item
+                    .options__item-title Рестораны, кафе
+                    .options__item-img
+                        img(src="assets/images/v-img-5.png", alt="img")
+
+                .options__item
+                    .options__item-title Мебель под заказ
+                    .options__item-img
+                        img(src="assets/images/v-img-6.png", alt="img")
+
+                .options__item
+                    .options__item-title Пошив чехлов на заказ
+                    .options__item-img
+                        img(src="assets/images/v-img-7.png", alt="img")
+
+                .options__item
+                    .options__item-title Химчистка мебели
+                    .options__item-img
+                        img(src="assets/images/v-img-8.png", alt="img")

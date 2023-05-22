@@ -16,11 +16,23 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include breakpoint(lg) {
+        padding: 56px 0 43px;
+    }
 }
 
 .footer__contact {
     margin-bottom: 34px;
     width: calc(50% - 4px);
+
+    @include breakpoint(lg) {
+        width: calc(25% - 10px);
+    }
+
+    @include breakpoint(hd) {
+        width: calc(25% - 80px);
+    }
 }
 
 .footer__contact-head {
@@ -30,12 +42,17 @@
 .footer__contact-icon {
     margin-right: 14px;
     background: #F9E328;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 45px;
     height: 42px;
     border-radius: 50%;
+
+    @include breakpoint(lg) {
+        margin-right: 27px;
+    }
 }
 
 .footer__contact-icon img {
@@ -46,6 +63,10 @@
     font-size: 20px;
     line-height: 120%;
     text-transform: uppercase;
+
+    @include breakpoint(lg) {
+        font-size: 24px;
+    }
 }
 
 .footer__contact-value {
@@ -54,11 +75,21 @@
     font-weight: 300;
     font-size: 14px;
     line-height: 150%;
+
+    @include breakpoint(lg) {
+        margin-top: 24px;
+        font-size: 20px;
+    }
+
+    @include breakpoint(xl) {
+        margin-top: 20px;
+    }
 }
 
 .footer__nav {
     padding: 16px;
     display: flex;
+    justify-content: center;
     border-top: 1px solid #75747B;
     border-bottom: 1px solid #75747B;
 }
@@ -68,14 +99,32 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 19px;
+
+    @include breakpoint(lg) {
+        font-size: 20px;
+        line-height: 27px;
+    }
 }
 
 .footer__nav-link ~ .footer__nav-link {
     margin-left: 10px;
+
+    @include breakpoint(lg) {
+        margin-left: 77px;
+    }
 }
 
 .footer__services {
     padding: 36px 16px 22px;
+
+    @include breakpoint(lg) {
+        padding: 27px 0 15px;
+    }
+
+    @include breakpoint(xl) {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .footer__services-title {
@@ -84,14 +133,70 @@
     line-height: 120%;
     text-align: center;
     text-transform: uppercase;
+
+    @include breakpoint(lg) {
+        font-size: 36px;
+    }
+
+    @include breakpoint(xl) {
+        margin-right: 45px;
+        margin-bottom: 0;
+    }
 }
 
 .footer__services-items {
+    margin-left: -9px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+
+    @include breakpoint(lg) {
+        margin-left: -47px;
+    }
+
+    @include breakpoint(xl) {
+        margin-left: -42px;
+    }
 }
 
-.footer__services-items img {
-    width: calc(100% / 12 * 2);
+.footer__services-image {
+    margin-left: 9px;
+    width: calc(100% / 12 * 2 - 9px);
+    max-width: 100px;
+
+    @include breakpoint(lg) {
+        margin-left: 47px;
+        width: 98px;
+        height: 62px;
+    }
+
+    @include breakpoint(xl) {
+        margin-left: 42px;
+    }
+}
+
+.footer__bottom {
+    background: #4D4C55;
+    font-family: $roboto;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.footer__row {
+    padding: 23px 0 17px;
+    color: #fff;
+    text-align: center;
+
+    @include breakpoint(lg) {
+        padding: 23px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footer__row div {
+    
+    @include breakpointMax(lg) {
+        margin-bottom: 20px;
+    }
 }

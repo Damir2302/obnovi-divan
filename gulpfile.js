@@ -234,8 +234,9 @@ function jsPlugins(cb) {
         pathTo.resolve('node_modules', 'jquery/*/jquery.min.js'),
         pathTo.resolve('node_modules', 'swiper/swiper-bundle.min.js'),
         pathTo.resolve('node_modules', 'inputmask/*/jquery.inputmask.min.js'),
-        pathTo.resolve('src', 'assets/js/ymaps-touch-scroll.js'),
-        pathTo.resolve('node_modules', '@fancyapps/ui/dist/fancybox.umd.js')
+        pathTo.resolve('src', 'assets/js/plugins/ymaps-touch-scroll.js'),
+        pathTo.resolve('node_modules', '@fancyapps/ui/dist/fancybox.umd.js'),
+        pathTo.resolve('src', 'assets/js/plugins/beforeafter.jquery-1.0.0.min.js'),
 	])
     .pipe(plumber({
 		errorHandler: notify.onError("Error: <%= error.message %>")
