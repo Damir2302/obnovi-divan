@@ -1,0 +1,71 @@
+.about-page .hero {
+    
+    @include breakpointMax(lg) {
+        height: auto;
+        max-height: unset;
+    }
+}
+
+.about-page .hero-subtitle {
+    margin: 0 auto 40px;
+    max-width: 686px;
+}
+
+.hero-features {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #fff;
+
+    @include breakpoint(xs) {
+        margin: 60px auto 0;
+        justify-content: center;
+        max-width: 425px;
+        text-align: center;
+    }
+
+    @include breakpoint(lg) {
+        max-width: 852px;
+    }
+
+    @include breakpoint(hd) {
+        margin-top: 100px;
+    }
+}
+
+.hero-item {
+    margin-bottom: 46px;
+    width: calc(50% - 20px);
+
+    @include breakpoint(lg) {
+        margin-left: 81px;
+        width: auto;
+    }
+}
+
+.hero-item:first-child {
+
+    @include breakpoint(lg) {
+        margin-left: 0;
+    }
+}
+
+.hero-item p:first-child {
+    font-size: 48px;
+    line-height: 120%;
+    text-transform: uppercase;
+
+    @include breakpoint(lg) {
+        font-size: 64px;
+    }
+}
+
+.hero-item p:last-child {
+    font-size: 15px;
+    line-height: 20px;
+
+    @include breakpoint(lg) {
+        font-size: 20px;
+    }
+}

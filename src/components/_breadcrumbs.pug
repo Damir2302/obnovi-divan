@@ -2,19 +2,21 @@ mixin breadcrumbs(...items)
 
     .breadcrumbs
 
-        .container
+        .breadcrumbs-inner
 
-            .breadcrumbs-wrapper
+            .container
 
-                .breadcrumbs-item
-                    a(href='/') Главная
+                .breadcrumbs-wrapper
 
-                each item in items
+                    .breadcrumbs-item
+                        a(href='/') Главная
 
-                    if item == items[items.length - 1]
-                        .breadcrumbs-item
-                            span= item
+                    each item in items
 
-                    else
-                        .breadcrumbs-item
-                            a(href="#")= item
+                        if item == items[items.length - 1]
+                            .breadcrumbs-item
+                                span= item
+
+                        else
+                            .breadcrumbs-item
+                                a(href="#")= item

@@ -15,15 +15,15 @@ block header
                         img(src="assets/images/logo-black.svg", alt="logo")
 
                 .header__nav
-                    .header__nav-link
+                    .header__nav-link(class= bodyClass == 'about-page' ? 'active' : '')
                         a(href="about.html") О фабрике
-                    .header__nav-link
+                    .header__nav-link(class= bodyClass == 'services-page' ? 'active' : '')
                         a(href="services.html") Услуги
-                    .header__nav-link
+                    .header__nav-link(class= bodyClass == 'price-page' ? 'active' : '')
                         a(href="prices.html") Цены
-                    .header__nav-link
+                    .header__nav-link(class= bodyClass == 'portfolio-page' ? 'active' : '')
                         a(href="portfolio.html") Портфолио
-                    .header__nav-link
+                    .header__nav-link(class= bodyClass == 'contact-page' ? 'active' : '')
                         a(href="contacts.html") Контакты
 
                 .header__contacts.tablet

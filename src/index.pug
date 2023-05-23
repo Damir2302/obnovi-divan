@@ -19,7 +19,7 @@ block main
                 .hero-buttons
                     .hero-btn.btn-style.btn-style--fill-white
                         a(href="portfolio.html") Смотреть портфолио
-                    .hero-btn.btn-style.btn-style--border-yellow(data-src="#popup-calc" data-fancybox) Узнать стоимость
+                    .hero-btn.btn-style.btn-style--border-yellow(data-src="#popup-callback" data-fancybox) Узнать стоимость
 
         .main
 
@@ -102,7 +102,7 @@ block main
     section.section-works   
 
         h2.works-title.section-title Примеры работ
-        .works-subtitle Любимая мебель заслуживает второго шанса. Посмотрите, как она преображается и обретает вторую жизнь в наших руках
+        .works-subtitle.section-subtitle Любимая мебель заслуживает второго шанса. Посмотрите, как она преображается и обретает вторую жизнь в наших руках
 
         .works
 
@@ -141,8 +141,8 @@ block main
 
         .container
 
-            h2.request-title.section-title более 5 000 образцов материалов
-            .request-subtitle Оставьте заявку на консультацию, наши специалисты свяжутся с вами. Мы расскажем про материалы, оборудование и способы перетяжки, которые используем в работе.
+            h2.request-title.section-title <span>более 5 000</span> образцов материалов
+            .request-subtitle.section-subtitle Оставьте заявку на консультацию, наши специалисты свяжутся с вами. Мы расскажем про материалы, оборудование и способы перетяжки, которые используем в работе.
 
             .request
 
@@ -151,12 +151,12 @@ block main
                     .request__form
                         
                         .request__input
-                            input(type="text" placeholder="Ваше имя")
+                            input(type="text" placeholder="Ваше имя" required)
                         
                         .request__input
-                            input(type="tel" placeholder="Телефон")
+                            input(type="tel" placeholder="Телефон" required)
                         
-                        .request__submit.btn-style.btn-style--fill-yellow Отправить заявку
+                        button.request__submit.btn-style.btn-style--fill-yellow(type="submit") Отправить заявку
 
                         .request__agreement Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных.
 
@@ -203,7 +203,7 @@ block main
         .container
 
             h2.options-title.section-title Наши услуги
-            .options-subtitle Любимая мебель заслуживает второго шанса. Посмотрите, как она преображается и обретает вторую жизнь в наших руках
+            .options-subtitle.section-subtitle Любимая мебель заслуживает второго шанса. Посмотрите, как она преображается и обретает вторую жизнь в наших руках
 
             .options 
 
@@ -211,38 +211,160 @@ block main
                     .options__item-title Обивка мягкой мебели
                     .options__item-img
                         img(src="assets/images/v-img-1.png", alt="img")
+                    .options__item-link
+                        a(href="#")
+                            img(src="assets/images/plus.svg", alt="icon")
 
                 .options__item
                     .options__item-title перетяжка мягкой мебели
                     .options__item-img
                         img(src="assets/images/v-img-2.png", alt="img")
+                    .options__item-link
+                        a(href="#")
+                            img(src="assets/images/plus.svg", alt="icon")
 
                 .options__item
                     .options__item-title изготовление стеновых панелей
                     .options__item-img
                         img(src="assets/images/v-img-3.png", alt="img")
+                    .options__item-link
+                        a(href="#")
+                            img(src="assets/images/plus.svg", alt="icon")
 
                 .options__item
                     .options__item-title Реставрация мебели
                     .options__item-img
                         img(src="assets/images/v-img-4.png", alt="img")
+                    .options__item-link
+                        a(href="#")
+                            img(src="assets/images/plus.svg", alt="icon")
 
                 .options__item
                     .options__item-title Рестораны, кафе
                     .options__item-img
                         img(src="assets/images/v-img-5.png", alt="img")
+                    .options__item-link
+                        a(href="#")
+                            img(src="assets/images/plus.svg", alt="icon")
 
                 .options__item
                     .options__item-title Мебель под заказ
                     .options__item-img
                         img(src="assets/images/v-img-6.png", alt="img")
+                    .options__item-link
+                        a(href="#")
+                            img(src="assets/images/plus.svg", alt="icon")
 
                 .options__item
                     .options__item-title Пошив чехлов на заказ
                     .options__item-img
                         img(src="assets/images/v-img-7.png", alt="img")
+                    .options__item-link
+                        a(href="#")
+                            img(src="assets/images/plus.svg", alt="icon")
 
                 .options__item
                     .options__item-title Химчистка мебели
                     .options__item-img
                         img(src="assets/images/v-img-8.png", alt="img")
+                    .options__item-link
+                        a(href="#")
+                            img(src="assets/images/plus.svg", alt="icon")
+
+    section.section-calc
+
+        .container
+
+            .calc
+
+                h2.calc-title.section-title Стоимость Работ
+
+                .calc__block
+
+                    .calc__row
+                        .calc__row-text Диван с деревянными подлокотниками
+                        .calc__row-value от 5 000 ₽
+
+                    .calc__row
+                        .calc__row-text Диван с мягкими подлокотниками
+                        .calc__row-value от 6 500 ₽ 
+                    
+                    .calc__row
+                        .calc__row-text Угловой диван
+                        .calc__row-value от 12 000 ₽ 
+                    
+                    .calc__row
+                        .calc__row-text Кожаный диван
+                        .calc__row-value от 25 000 ₽ 
+                    
+                    .calc__row
+                        .calc__row-text Кресло с деревянными подлокотниками
+                        .calc__row-value от 3 500 ₽ 
+                    
+                    .calc__row
+                        .calc__row-text Кресло с мягкими подлокотниками
+                        .calc__row-value от 4 500 ₽ 
+                    
+                    .calc__row
+                        .calc__row-text Стул с подлокотниками
+                        .calc__row-value от 2 500 ₽ 
+                    
+                    .calc__row
+                        .calc__row-text Стул спинка + сидушка
+                        .calc__row-value от 999 ₽ 
+                    
+                    .calc__row
+                        .calc__row-text Стул с деревянной спинкой
+                        .calc__row-value от 800 ₽
+
+                .calc__calc
+
+                    .calc__calc-left
+                        .calc__calc-title рассчитайте стоимость реставрации мебели по фото
+                        .calc__calc-text Поможем с выбором материала и предложим варианты перетяжки обивки и реставрации мебели на месте.
+
+                    .calc__calc-right
+                        .calc__calc-info Прикрепите фото и опишите проблему, мы найдем решение
+                        .calc__calc-btn.btn-style.btn-style--fill-yellow(data-src="#popup-calc" data-fancybox) Рассчитать стоимость
+
+    section.section-portfolio-videos
+
+        h2.p-videos-title.section-title Видео портфолио
+
+        .p-videos
+
+            .swiper
+
+                .swiper-wrapper
+
+                    .p-videos__slide.swiper-slide
+                        .play-btn
+                        video(src="#" poster="assets/images/image 14.jpg")
+                    
+                    .p-videos__slide.swiper-slide
+                        .play-btn
+                        video(src="#" poster="assets/images/image 14.jpg")
+
+                    .p-videos__slide.swiper-slide
+                        .play-btn
+                        video(src="#" poster="assets/images/image 14.jpg")
+                    
+                    .p-videos__slide.swiper-slide
+                        .play-btn
+                        video(src="#" poster="assets/images/image 14.jpg")
+
+                    .p-videos__slide.swiper-slide
+                        .play-btn
+                        video(src="#" poster="assets/images/image 14.jpg")
+                    
+                    .p-videos__slide.swiper-slide
+                        .play-btn
+                        video(src="#" poster="assets/images/image 14.jpg")
+
+
+            .slider-navigation
+                .slider-arrow.slider-arrow--left.nav-gray
+                .slider-arrow.slider-arrow--right.nav-gray
+
+            .p-videos__btn
+                a.btn-style.btn-style--fill-gray(href="#") Смотреть все работы

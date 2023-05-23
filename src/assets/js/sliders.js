@@ -4,7 +4,6 @@ $(document).ready(function() {
     var gallerySlider = new Swiper(`.works .swiper`, {
         slidesPerView: 'auto',
         spaceBetween: 30,
-        freeMode: true,
         simulateTouch: false,
         centeredSlides: true,
         loop: true,
@@ -12,6 +11,29 @@ $(document).ready(function() {
         navigation: {
             nextEl: `.works .slider-arrow--right`,
             prevEl: `.works .slider-arrow--left`,
+        },
+
+        breakpoints: {
+            1024: {
+                spaceBetween: 100,
+            },
+
+            1440: {
+                spaceBetween: 150,
+            }
+        }
+    })
+
+    // VIDEO PORTFOLIO SLIDER
+    var gallerySlider = new Swiper(`.p-videos .swiper`, {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+
+        navigation: {
+            nextEl: `.p-videos .slider-arrow--right`,
+            prevEl: `.p-videos .slider-arrow--left`,
         },
 
         breakpoints: {

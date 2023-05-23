@@ -1,0 +1,157 @@
+---
+title: ОбновиДиван | О фабрике
+bodyClass: about-page
+---
+
+extends includes/_page
+
+block main
+
+    section.section-hero(style="background-image: url(assets/images/man-restores-chain-by-painting-it-with-plaster.png)")
+
+        .hero
+
+            .container
+
+                include components/_breadcrumbs
+                +breadcrumbs('О фабрике')
+
+                .hero-title
+                    h1 О фабрике
+                .hero-subtitle Компания ОбновиДиван — лидирующая российская фабрика по ремонту, перетяжке и восстановлению мебели. Мы работаем с ХХХХ года для того, чтобы ваша мягкая мебель служила вам долго и была лучше новой.
+                .hero-buttons
+                    .hero-btn.btn-style.btn-style--fill-white
+                        a(href="portfolio.html") Смотреть портфолио
+                
+                .hero-features
+                    
+                    .hero-item
+                        p 18
+                        p лет на рынке
+                    
+                    .hero-item
+                        p 5.000+
+                        p вариантов материала
+
+                    .hero-item
+                        p 3
+                        p года гарантии
+
+                    .hero-item
+                        p 80
+                        p км выезд за МКАД
+
+    section.section-about
+
+        .container
+            
+            h2.section-title Перетяжка мягкой мебели на современном оборудовании
+
+            .section-subtitle Перетяжка мягкой мебели на современном оборудовании
+
+            .cost__banner
+                .cost__banner-wrap
+                    .cost__banner-title В среднем весь комплекс работ занимает <span>всего 9 дней!</span>
+                    .cost__banner-text Поможем с выбором материала и предложим варианты перетяжки обивки и реставрации мебели на месте.
+                .cost__banner-contacts
+                    a(href="tel:+ 7 (499) 714-69-26") + 7 (499) 714-69-26
+                    .btn-style.btn-style--fill-yellow(data-src="#popup-calc" data-fancybox) Рассчитать стоимость
+
+    section.section-works   
+
+        h2.works-title.section-title Примеры работ
+        .works-subtitle Любимая мебель заслуживает второго шанса. Посмотрите, как она преображается и обретает вторую жизнь в наших руках
+
+        .works
+
+            .works__label
+                .works__label-name Было
+                .works__label-name Стало
+
+            .swiper
+
+                .swiper-wrapper
+
+                    .works__slide.swiper-slide.beforeAfter
+                        img(src="assets/images/img_1.1.png", alt="img")
+                        img(src="assets/images/img_1.2.png", alt="img")
+
+                    .works__slide.swiper-slide.beforeAfter
+                        img(src="assets/images/img_2.1.png", alt="img")
+                        img(src="assets/images/img_2.2.png", alt="img")
+
+                    .works__slide.swiper-slide.beforeAfter
+                        img(src="assets/images/img_1.1.png", alt="img")
+                        img(src="assets/images/img_1.2.png", alt="img")
+
+                    .works__slide.swiper-slide.beforeAfter
+                        img(src="assets/images/img_2.1.png", alt="img")
+                        img(src="assets/images/img_2.2.png", alt="img")
+            
+            .slider-navigation
+                .slider-arrow.slider-arrow--left
+                .slider-arrow.slider-arrow--right
+
+            .works__link
+                a.btn-style.btn-style--fill-white(href="#") Смотреть все работы
+
+    section.section-request
+
+        .container
+
+            h2.request-title.section-title <span>более 5 000</span> образцов материалов
+            .request-subtitle Оставьте заявку на консультацию, наши специалисты свяжутся с вами. Мы расскажем про материалы, оборудование и способы перетяжки, которые используем в работе.
+
+            .request
+
+                form
+
+                    .request__form
+                        
+                        .request__input
+                            input(type="text" placeholder="Ваше имя" required)
+                        
+                        .request__input
+                            input(type="tel" placeholder="Телефон" required)
+                        
+                        button.request__submit.btn-style.btn-style--fill-yellow(type="submit") Отправить заявку
+
+                        .request__agreement Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных.
+
+            .request-features
+
+                .r-features__item
+                    .r-features__icon
+                        img(src="assets/images/icon-materials.svg", alt="icon")
+                    .r-features__title материалы
+                    .r-features__text Используем все виды кожи, которые представлены на Российском рынке.  Доступны любые эксклюзивные ткани (Испания, Италия, Бельгия).
+
+                .r-features__item
+                    .r-features__icon
+                        img(src="assets/images/icon-team.svg", alt="icon")
+                    .r-features__title команда
+                    .r-features__text В наличии все виды кожи, которые представлены на Российском рынке.  Доступны любые эксклюзивные ткани (Испания, Италия, Бельгия).
+
+                .r-features__item
+                    .r-features__icon
+                        img(src="assets/images/icon-filler.svg", alt="icon")
+                    .r-features__title наполнители
+                    .r-features__text Используем высокоэластичный пенополиуретан (HR), который используют мировые мебельные бренды.
+
+                .r-features__item
+                    .r-features__icon
+                        img(src="assets/images/icon-quality.svg", alt="icon")
+                    .r-features__title Качество
+                    .r-features__text Производим бесплатную замену верхнего слоя наполнения, усиление конструкции и обслуживание всех механизмов.
+
+                .r-features__item
+                    .r-features__icon
+                        img(src="assets/images/icon-gears.svg", alt="icon")
+                    .r-features__title Автоматизация
+                    .r-features__text В работе мы используем специальное оборудование для резки наполнителя, что позволяет сохранить фабричное качество.
+
+                .r-features__item
+                    .r-features__icon
+                        img(src="assets/images/icon-sewing-machine.svg", alt="icon")
+                    .r-features__title мощности
+                    .r-features__text Площадь собственного производства - 600 кв. м.В работе используем только швейные машинки Durkopp Adler.

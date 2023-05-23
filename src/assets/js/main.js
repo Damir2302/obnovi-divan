@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+    // INPUT MASK PHONE NUMBER
+    $('input[type="tel"]').inputmask({"mask": "+7 (999) 99-99-99"});
+
     $('#fileUpload').on('change', function() {
         if ($(this).val().length) {
           let fileName = $('#fileUpload').val().split("\\");
