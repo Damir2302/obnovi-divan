@@ -1,0 +1,43 @@
+.services-page {
+
+    .section-hero {
+        padding-bottom: 100px;
+
+        @include breakpoint(xl) {
+            padding-bottom: 120px;
+        }
+    }
+
+    .hero {
+        height: auto;
+    }
+    
+    .section-services {
+        padding-bottom: 60px;
+        background: #fff;
+    }
+   
+    .section-services::before {
+        content: none;
+    }
+
+    .services-title {
+        color: #2B2A29;
+    }
+
+    .services-subtitle {
+        color: #2B2A29;
+    }
+
+    .cost__banner {
+        margin-top: 80px;
+
+        @include breakpoint(lg) {
+            margin-top: 110px;
+        }
+        
+        @include breakpoint(xl) {
+            margin-top: 135px;
+        }
+    }
+}

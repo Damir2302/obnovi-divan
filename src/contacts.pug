@@ -1,0 +1,91 @@
+---
+title: ОбновиДиван | Контакты
+bodyClass: contacts-page
+yandexMap: true
+---
+
+extends includes/_page
+
+block main
+
+    section.section-hero(style="background-image: url(assets/images/modern-black-leather-sofa-with-pillows-dark-backgroundgenerative-ai_2.png)")
+
+        .hero
+
+            .container
+
+                include components/_breadcrumbs
+                +breadcrumbs('Контакты')
+
+                .hero-title
+                    h1 Контакты
+                .hero-subtitle Компания ОбновиДиван — лидирующая российская фабрика по ремонту, перетяжке и восстановлению мебели. Мы работаем с ХХХХ года для того, чтобы ваша мягкая мебель служила вам долго и была лучше новой.
+    
+    section.section-contacts
+
+        .container
+
+            .contacts
+
+                .contacts__block
+
+                    .contacts__item
+                        .contacts__item-lable Отдел продаж
+                        p
+                            a(href="tel:+7 (499) 136-65-85") +7 (499) 136-65-85
+                        p
+                            a(href="mailto:obnovidivan.msk@yandex.ru") obnovidivan.msk@yandex.ru
+
+                    .contacts__item
+                        .contacts__item-lable Горячая линия
+                        p
+                            a(href="tel:+7 (499) 136-65-85") +7 (499) 136-65-85
+                        p
+                            a(href="mailto:obnovidivan.msk@yandex.ru") obnovidivan.msk@yandex.ru
+
+                    .contacts__item
+                        .contacts__item-lable Адрес фабрики
+                        p г. Долгопрудный, ул. Якова Гунина, д. 1, стр. 3
+
+                .contacts__form
+
+                    h2.section-title Напишите сообщение
+
+                    .contacts__form-wrap
+                    
+                        form(action="/")
+
+                            .contacts__form-container
+
+                                .contacts__form-main
+
+                                    .c-form-row
+                                        .input-style
+                                            input(type="text" placeholder="Представьтесь" required autocomplete="off")
+
+                                    .c-form-row
+                                        .input-style
+                                            input(type="tel" placeholder="+7" required autocomplete="off")
+
+                                    .c-form-row
+                                        .input-style
+                                            input(type="email" placeholder="Введите ваш E-mail" required autocomplete="off")
+      
+                                .contacts__form-right
+
+                                    .input-textarea
+                                        textarea(placeholder="Введите текст")
+
+                            .contacts__submit
+                                
+                                .agreement
+                                    .agreement-text Согласен с<a href="#"> политикой обработки персональных данных</a>
+                                
+                                .contacts__submit-btn
+                                    button.btn-style.btn-style--fill-gray(type="submit" tabindex="0") Отправить данные
+
+    section.section-map
+        
+        .container
+        
+            #map(style="width: 100%; height: 100%")

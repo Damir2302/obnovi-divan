@@ -1,0 +1,43 @@
+.services-page-inner {
+
+    .section-hero {
+        background-position: bottom;
+    }
+
+    .section-hero::before {
+        opacity: 0.6;
+    }
+
+    .hero-buttons {
+        margin-top: 30px;
+
+        @include breakpoint(xl) {
+            margin-top: 60px;
+        }
+    }
+
+    .calc {
+        margin-bottom: -200px;
+
+        @include breakpoint(lg) {
+            margin-top: 75px;
+        }
+
+        @include breakpoint(xl) {
+            margin-top: 100px;
+        }
+    }
+
+    .section-request {
+        position: relative;
+        z-index: 1;
+    }
+
+    .section-portfolio-videos {
+        
+        @include breakpoint(lg) {
+            --margin: -170px
+        }
+    }
+
+}

@@ -1,0 +1,89 @@
+.services-page-inner-last {
+
+    .section-hero {
+        background-position: bottom;
+    }
+
+    .section-hero::before {
+        opacity: 0.6;
+    }
+
+    .accented-text {
+        margin-bottom: 60px;
+        font-size: 18px;
+
+        @include breakpoint(lg) {
+            font-size: 24px;
+        }
+
+        @include breakpoint(xl) {
+            margin-bottom: 80px;
+        }
+    }
+
+    .hero-buttons {
+        margin-top: 30px;
+
+        @include breakpoint(xl) {
+            margin-top: 60px;
+        }
+    }
+
+    .section-request {
+        padding-bottom: 40px;
+
+        @include breakpoint(xl) {
+            padding: 90px 0 100px;
+        }
+    }
+
+    .section-works {
+        padding-top: 36px;
+
+        @include breakpoint(lg) {
+            padding-top: 60px;
+        }
+
+        @include breakpoint(xl) {
+            padding-top: 110px;
+        }
+    }
+
+    .section-calc {
+        padding-top: 40px;
+
+        @include breakpoint(lg) {
+            padding-top: 60px;
+        }
+
+        @include breakpoint(xl) {
+            padding-top: 100px;
+        }
+    }
+
+    .calc {
+        transform: unset;
+    }
+
+    .section-portfolio-videos {
+        --margin: -80px;
+
+        @include breakpoint(lg) {
+            --margin: -150px;
+            padding-top: 180px;
+        }
+
+        @include breakpoint(xl) {
+            --margin: -120px;
+            padding-top: 220px;
+        }
+    }
+
+    .section-review {
+        padding: 20px 0 60px;
+
+        @include breakpoint(lg) {
+            padding: 20px 0 100px;
+        }
+    }
+}

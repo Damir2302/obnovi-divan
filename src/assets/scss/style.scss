@@ -4,10 +4,6 @@
 @import 'base/reset';
 @import 'base/ui';
 
-@import 'plugins/animate.min';
-@import 'plugins/swiper-bundle';
-@import '@fancyapps/ui/src/Fancybox/fancybox.scss';
-
 @import 'includes/header';
 @import 'includes/footer';
 
@@ -16,3 +12,217 @@
 
 @import 'pages/index';
 @import 'pages/about';
+@import 'pages/services';
+@import 'pages/services-inner';
+@import 'pages/services-inner-last';
+@import 'pages/portfolio';
+@import 'pages/price';
+@import 'pages/contacts';
+
+.section-seo {
+    padding-bottom: 50px;
+}
+
+.section-seo.section-gray {
+    background: linear-gradient(180deg, #F1F1F1 0%, rgba(241, 241, 241, 0) 100%); 
+}
+
+.seo__content {
+    margin-top: 30px;
+
+    @include breakpoint(lg) {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    @include breakpoint(xl) {
+        margin-top: 56px;
+        margin-left: -30px;
+        justify-content: center;
+    }
+}
+
+.seo__content p {
+    margin-bottom: 30px;
+    font-family: $roboto;
+    font-size: 14px;
+    line-height: 150%;
+
+    @include breakpoint(lg) {
+        width: calc(50% - 15px);
+    }
+
+    @include breakpoint(xl) {
+        margin-left: 30px;
+        width: 560px;
+    }
+}
+
+.seo-title {
+    color: #2B2A29;
+}
+
+.section-info-request {
+    padding: 60px 0;
+
+    @include breakpoint(lg) {
+        padding: 60px 0 90px;
+    }
+
+    @include breakpoint(xl) {
+        padding: 90px 0 100px;
+    }
+}
+
+.i-request {
+
+    @include breakpoint(lg) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.i-request__desc {
+
+    @include breakpoint(lg) {
+        width: calc(50% - 10px);
+    }
+
+    @include breakpoint(xl) {
+        width: 654px;
+    }
+}
+
+.i-request__desc-main {
+    font-size: 18px;
+    line-height: 130%;
+
+    @include breakpoint(lg) {
+        padding-left: 21px;
+        font-size: 20px;
+    }
+
+    @include breakpoint(xl) {
+        margin-bottom: 55px;
+    }
+}
+
+.i-request__desc-info {
+    font-family: $roboto;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+
+    @include breakpoint(lg) {
+        font-size: 20px;
+    }
+}
+
+.i-request__desc-info li ~ li {
+    margin-top: 30px;
+}
+
+.i-request__desc-info p {
+    margin: 30px 0;
+}
+
+.i-request__form {
+    margin: 70px auto 0;
+    max-width: 425px;
+
+    @include breakpoint(lg) {
+        margin: 0;
+        width: calc(50% - 10px);
+        max-width: unset;
+    }
+
+    @include breakpoint(xl) {
+        width: 575px;
+    }
+}
+
+.i-request__form form {
+
+    @include breakpoint(xl) {
+        margin: 0 auto;
+        max-width: 308px;
+    }
+}
+
+.i-request__form-title {
+    margin-bottom: 40px;
+    font-size: 30px;
+    line-height: 120%;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include breakpoint(lg) {
+        margin-bottom: 14px;
+        font-size: 40px;
+    }
+
+    @include breakpoint(xl) {
+        margin-bottom: 40px;
+        font-size: 48px;
+    }
+}
+
+.i-request__form-title span {
+    color: #CEB011;
+}
+
+.i-request__form-subtitle {
+    margin-bottom: 40px;
+    font-family: $roboto;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+
+    @include breakpoint(lg) {
+        margin-bottom: 50px;
+    }
+}
+
+.i-request__form .request__input,
+.i-request__form .request__submit {
+    
+    @include breakpoint(lg) {
+        margin: 30px auto;
+        display: block;
+    }
+}
+
+.section-review {
+    padding: 40px 0;
+
+    @include breakpoint(lg) {
+        padding: 80px 0;
+    }
+
+    @include breakpoint(xl) {
+        padding: 100px 0;
+    }
+}
+
+.reviews-title {
+    margin-bottom: 40px;
+    color: #2B2A29;
+
+    @include breakpoint(xl) {
+        margin-bottom: 90px;
+    }
+}
+
+.review {
+    position: relative;
+}
+
+.review__slide {
+    padding: 10px;
+    height: auto;
+    border: 1px solid #A4A4A3;
+    border-radius: 16px;
+}

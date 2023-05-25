@@ -1,0 +1,251 @@
+.contacts-page .hero {
+    padding-bottom: 100px;
+    height: auto;
+    max-height: unset;
+
+    @include breakpoint(xl) {
+        padding-bottom: 116px;
+    }
+}
+
+.contacts-page .section-hero::before {
+    opacity: 0.6;
+}
+
+.section-contacts {
+    padding: 40px 0;
+
+    @include breakpoint(lg) {
+        padding: 75px 0;
+    }
+
+    @include breakpoint(xl) {
+        padding: 90px 0;
+    }
+}
+
+.contacts {
+
+    @include breakpoint(xl) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contacts__block {
+
+    @include breakpoint(xs) {
+        margin-left: -20px;
+        margin-bottom: -20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @include breakpoint(md) {
+        justify-content: center;
+    }
+
+    @include breakpoint(lg) {
+        justify-content: unset;
+    }
+
+    @include breakpoint(xl) {
+        margin-left: 0;
+        margin-bottom: -50px;
+        display: block;
+        width: 280px;
+    }
+}
+
+.contacts__item {
+    
+    @include breakpoint(xs) {
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    @include breakpoint(md) {
+        width: calc(100% / 3 - 20px);
+    }
+
+    @include breakpoint(xl) {
+        margin-bottom: 50px;
+        width: auto;
+    }
+}
+
+.contacts__item ~ .contacts__item {
+    
+    @include breakpointMax(xs) {
+        margin-top: 30px;
+    }
+}
+
+.contacts__item-lable {
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 120%;
+    text-transform: uppercase;
+
+    @include breakpoint(lg) {
+        font-size: 24px;
+    }
+}
+
+.contacts__item p {
+    font-family: $roboto;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+
+    @include breakpoint(lg) {
+        font-size: 20px;
+    }
+}
+
+.contacts__form {
+    margin-top: 60px;
+
+    @include breakpoint(lg) {
+        margin-top: 75px;
+    }
+
+    @include breakpoint(xl) {
+        margin-top: 0;
+        width: 805px;
+    }
+}
+
+.contacts__form h2 {
+    margin-bottom: 40px;
+    text-align: left;
+    color: #2B2A29;
+
+    @include breakpoint(xs) {
+        text-align: center;
+    }
+
+    @include breakpoint(lg) {
+        margin-bottom: 54px;
+        max-width: unset;
+        text-align: unset;
+    }
+}
+
+.contacts__form-wrap {
+    margin: 0 auto;
+    max-width: 425px;
+
+    @include breakpoint(lg) {
+        max-width: unset;
+    }
+}
+
+.contacts__form-container {
+
+    @include breakpoint(lg) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contacts__form-main {
+
+    @include breakpoint(lg) {
+        width: calc(100% / 12 * 5 - 10px);
+    }
+}
+
+.contacts__form-right {
+    
+    @include breakpoint(lg) {
+        width: calc(100% / 12 * 6 - 10px);
+    }
+
+    @include breakpoint(xl) {
+        width: 447px;
+    }
+}
+
+.c-form-row ~ .c-form-row {
+    margin-top: 20px;
+}
+
+.contacts__form-right {
+
+    @include breakpointMax(lg) {
+        margin-top: 40px;
+    }
+}
+
+.contacts__form .input-textarea textarea {
+    padding: 24px 15px;
+    width: 100%;
+    height: 226px;
+    font-family: $roboto;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    color: #7C7B7B;
+    border: 1px solid #ACACAC;
+    border-radius: 30px;
+    vertical-align: middle;
+    outline: none!important;
+    resize: none;
+}
+
+.contacts__submit {
+
+    @include breakpoint(lg) {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contacts__submit .agreement {
+    
+    @include breakpoint(lg) {
+        margin-top: 0;
+        width: calc(100% / 12 * 5 - 10px);
+    }
+}
+
+.contacts__submit-btn {
+    margin-top: 40px;
+
+    @include breakpoint(lg) {
+        margin-top: 0;
+        width: calc(100% / 12 * 6 - 10px);
+    }
+}
+
+.contacts__submit-btn button {
+    padding: 20px;
+    width: 230px;
+}
+
+.section-map {
+    padding-bottom: 40px;
+    height: 300px;
+    box-sizing: content-box;
+
+    @include breakpoint(lg) {
+        padding-bottom: 60px;
+    }
+
+    @include breakpoint(xl) {
+        padding-bottom: 120px;
+    }
+}
+
+.section-map .container {
+    width: 100%;
+    height: 100%;
+}
+
+.section-map #map {
+    border: 1px solid #CEB011;
+    border-radius: 30px;
+    overflow: hidden;
+}

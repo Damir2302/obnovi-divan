@@ -7,7 +7,6 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    transition: .4s;
 }
 
 body.overflow-hidden {
@@ -20,16 +19,16 @@ body b {
 }
 
 ::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+    width: 10px;
+    height: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: transparent;
+    background: rgb(173, 173, 173);
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent;
+    background: gray;
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -155,6 +154,8 @@ main {
     text-transform: uppercase;
 
     @include breakpoint(lg) {
+        margin: 0 auto;
+        max-width: 744px;
         font-size: 48px;
     }
 }
@@ -241,7 +242,8 @@ main {
 }
 
 .hero-subtitle {
-    margin-bottom: 40px;
+    margin: 0 auto 40px;
+    max-width: 686px;
     font-family: $roboto;
     font-weight: 300;
     font-size: 16px;
@@ -339,4 +341,66 @@ main {
 .slider-arrow--right::before {
     background: url('../images/arrow-right.svg') no-repeat;
     background-position: center;
+}
+
+.accented-text {
+    padding-left: 17px;
+    position: relative;
+    text-transform: uppercase;
+
+    @include breakpoint(lg) {
+        padding-left: 21px;
+    }
+}
+
+.accented-text::before {
+    content: '';
+    background: #F9E328;
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 4px;
+    height: 100%;
+}
+
+.tabs {
+    user-select: none;
+
+    @include breakpoint(lg) {
+        padding: 0 30px;
+        display: flex;
+    }
+}
+
+.tabs__item {
+    padding: 10px;
+    width: auto;
+    font-family: $playfair;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    color: #4F4E53;
+    border: 1px solid #4F4E53;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.tabs__item ~ .tabs__item {
+
+    @include breakpoint(md) {
+        margin-left: 10px;
+    }
+}
+
+.tabs__item:first-child {
+    
+    @include breakpointMax(lg) {
+        margin-left: 16px;
+    }
+}
+
+.tabs__item.active {
+    background: #4F4E53;
+    color: #fff;
 }

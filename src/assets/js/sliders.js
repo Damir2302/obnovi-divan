@@ -47,5 +47,60 @@ $(document).ready(function() {
         }
     })
 
+    // REVIEW SLIDER
+    var reviewSlider = new Swiper(`.review .swiper`, {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        loop: true,
 
+        navigation: {
+            nextEl: `.review .slider-arrow--right`,
+            prevEl: `.review .slider-arrow--left`,
+        },
+
+        breakpoints: {
+            744: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+
+            1260: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            }
+        }
+    })
+
+    // TABS SLIDER
+    let tabsSlider
+    let tabsSliderInit
+    
+    function tabsSliderRun() {
+        if ($(window).width() < 744) {
+            if(!tabsSliderInit) {
+                tabsSliderInit = true
+                tabsSlider = new Swiper(`.tabs .swiper`, {
+                    slidesPerView: 'auto',
+                    spaceBetween: 10,
+                    freeMode: true,
+                    slidesOffsetAfter: 0
+                })
+            }
+        } else {
+            if (typeof tabsSlider !== "undefined") {
+                tabsSliderInit = false
+                tabsSlider.destroy()
+            }
+        }
+    }
+    
+    tabsSliderRun()
+
+    $(window).on('resize', function() {
+        tabsSliderRun()
+    })
 })

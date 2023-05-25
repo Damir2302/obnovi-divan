@@ -1,0 +1,262 @@
+---
+title: ОбновиДиван | Перетяжка Кресла
+bodyClass: services-page-inner-last
+---
+
+extends includes/_page
+
+block main
+
+    section.section-hero(style="background-image: url(assets/images/elegant-leather-armchair-sitting-modern-office-studio-generated-by-ai.jpg)")
+
+        .hero
+
+            .container
+
+                include components/_breadcrumbs
+                +breadcrumbs('Услуги', 'Обивка мягкой мебели', 'Перетяжка кресла')
+
+                .hero-title
+                    h1 Перетяжка кресла
+                .hero-buttons
+                    .hero-btn.btn-style.btn-style--fill-white(data-src="#popup-callback" data-fancybox) Рассчитать стоимость
+                    .hero-btn.btn-style.btn-style--border-yellow
+                        a(href="portfolio.html") Смотреть портфолио
+
+    section.section-request
+
+        .container
+
+            .accented-text Фабрика «Деганов Мебель» выполняет перетяжку кресел на дому и на фабрике в Москве уже 15 лет. Если требуется обивка или перетяжка кресла обращайтесь на нашу фабрику! Наш мастер-дизайнер приедет бесплатно к заказчику с образцами уже сегодня! Мы используем наполнители и ткани ведущих поставщиков России и Европы, поэтому даем гарантию на работы и материалы 36 месяцев!
+
+            h2.request-title.section-title <span>более 5 000</span> образцов материалов
+            .request-subtitle.section-subtitle Оставьте заявку на бесплатный расчет стоимости
+
+            .request
+
+                form
+
+                    .request__form
+                        
+                        .request__input
+                            input(type="text" placeholder="Ваше имя" required)
+                        
+                        .request__input
+                            input(type="tel" placeholder="Телефон" required)
+                        
+                        button.request__submit.btn-style.btn-style--fill-yellow(type="submit") Отправить заявку
+
+                        .request__agreement Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных.
+
+            .request-features
+
+                .r-features__item
+                    .r-features__icon
+                        img(src="assets/images/icon-materials.svg", alt="icon")
+                    .r-features__title материалы
+                    .r-features__text Используем все виды кожи, которые представлены на Российском рынке.  Доступны любые эксклюзивные ткани (Испания, Италия, Бельгия).
+
+                .r-features__item
+                    .r-features__icon
+                        img(src="assets/images/icon-team.svg", alt="icon")
+                    .r-features__title команда
+                    .r-features__text В наличии все виды кожи, которые представлены на Российском рынке.  Доступны любые эксклюзивные ткани (Испания, Италия, Бельгия).
+
+                .r-features__item
+                    .r-features__icon
+                        img(src="assets/images/icon-filler.svg", alt="icon")
+                    .r-features__title наполнители
+                    .r-features__text Используем высокоэластичный пенополиуретан (HR), который используют мировые мебельные бренды.
+
+                .r-features__item
+                    .r-features__icon
+                        img(src="assets/images/icon-quality.svg", alt="icon")
+                    .r-features__title Качество
+                    .r-features__text Производим бесплатную замену верхнего слоя наполнения, усиление конструкции и обслуживание всех механизмов.
+
+                .r-features__item
+                    .r-features__icon
+                        img(src="assets/images/icon-gears.svg", alt="icon")
+                    .r-features__title Автоматизация
+                    .r-features__text В работе мы используем специальное оборудование для резки наполнителя, что позволяет сохранить фабричное качество.
+
+                .r-features__item
+                    .r-features__icon
+                        img(src="assets/images/icon-sewing-machine.svg", alt="icon")
+                    .r-features__title мощности
+                    .r-features__text Площадь собственного производства - 600 кв. м.В работе используем только швейные машинки Durkopp Adler.
+
+    section.section-works   
+
+        h2.works-title.section-title Примеры работ
+        .works-subtitle.section-subtitle Любимая мебель заслуживает второго шанса. Посмотрите, как она преображается и обретает вторую жизнь в наших руках
+
+        .works
+
+            .works__label
+                .works__label-name Было
+                .works__label-name Стало
+
+            .swiper
+
+                .swiper-wrapper
+
+                    .works__slide.swiper-slide.beforeAfter
+                        img(src="assets/images/img_1.1.png", alt="img")
+                        img(src="assets/images/img_1.2.png", alt="img")
+
+                    .works__slide.swiper-slide.beforeAfter
+                        img(src="assets/images/img_2.1.png", alt="img")
+                        img(src="assets/images/img_2.2.png", alt="img")
+
+                    .works__slide.swiper-slide.beforeAfter
+                        img(src="assets/images/img_1.1.png", alt="img")
+                        img(src="assets/images/img_1.2.png", alt="img")
+
+                    .works__slide.swiper-slide.beforeAfter
+                        img(src="assets/images/img_2.1.png", alt="img")
+                        img(src="assets/images/img_2.2.png", alt="img")
+            
+            .slider-navigation
+                .slider-arrow.slider-arrow--left
+                .slider-arrow.slider-arrow--right
+
+            .works__link
+                a.btn-style.btn-style--fill-white(href="#") Смотреть все работы
+
+    section.section-calc
+
+        .container
+
+            .calc
+
+                h2.calc-title.section-title Стоимость Работ
+
+                .calc__block
+
+                    .calc__row
+                        .calc__row-text Диван с деревянными подлокотниками
+                        .calc__row-value от 5 000 ₽
+
+                    .calc__row
+                        .calc__row-text Диван с мягкими подлокотниками
+                        .calc__row-value от 6 500 ₽ 
+                    
+                    .calc__row
+                        .calc__row-text Угловой диван
+                        .calc__row-value от 12 000 ₽ 
+                    
+                    .calc__row
+                        .calc__row-text Кожаный диван
+                        .calc__row-value от 25 000 ₽ 
+                    
+                    .calc__row
+                        .calc__row-text Кресло с деревянными подлокотниками
+                        .calc__row-value от 3 500 ₽ 
+                    
+                    .calc__row
+                        .calc__row-text Кресло с мягкими подлокотниками
+                        .calc__row-value от 4 500 ₽ 
+                    
+                    .calc__row
+                        .calc__row-text Стул с подлокотниками
+                        .calc__row-value от 2 500 ₽ 
+                    
+                    .calc__row
+                        .calc__row-text Стул спинка + сидушка
+                        .calc__row-value от 999 ₽ 
+                    
+                    .calc__row
+                        .calc__row-text Стул с деревянной спинкой
+                        .calc__row-value от 800 ₽
+
+                .calc__calc
+
+                    .calc__calc-left
+                        .calc__calc-title рассчитайте стоимость реставрации мебели по фото
+                        .calc__calc-text Поможем с выбором материала и предложим варианты перетяжки обивки и реставрации мебели на месте.
+
+                    .calc__calc-right
+                        .calc__calc-info Прикрепите фото и опишите проблему, мы найдем решение
+                        .calc__calc-btn.btn-style.btn-style--fill-yellow(data-src="#popup-calc" data-fancybox) Рассчитать стоимость
+
+            .cost__banner.black-style
+                .cost__banner-wrap
+                    .cost__banner-title В среднем весь комплекс работ занимает <span>всего 9 дней!</span>
+                    .cost__banner-text Поможем с выбором материала и предложим варианты перетяжки обивки и реставрации мебели на месте.
+                .cost__banner-contacts
+                    a(href="tel:+ 7 (499) 714-69-26") + 7 (499) 714-69-26
+                    .btn-style.btn-style--fill-yellow(data-src="#popup-calc" data-fancybox) Рассчитать стоимость
+
+    section.section-portfolio-videos
+
+        h2.p-videos-title.section-title Видео портфолио
+
+        .p-videos
+
+            .swiper
+
+                .swiper-wrapper
+
+                    .p-videos__slide.swiper-slide
+                        .play-btn
+                        video(src="#" poster="assets/images/image 14.jpg")
+                    
+                    .p-videos__slide.swiper-slide
+                        .play-btn
+                        video(src="#" poster="assets/images/image 14.jpg")
+
+                    .p-videos__slide.swiper-slide
+                        .play-btn
+                        video(src="#" poster="assets/images/image 14.jpg")
+                    
+                    .p-videos__slide.swiper-slide
+                        .play-btn
+                        video(src="#" poster="assets/images/image 14.jpg")
+
+                    .p-videos__slide.swiper-slide
+                        .play-btn
+                        video(src="#" poster="assets/images/image 14.jpg")
+                    
+                    .p-videos__slide.swiper-slide
+                        .play-btn
+                        video(src="#" poster="assets/images/image 14.jpg")
+
+
+            .slider-navigation
+                .slider-arrow.slider-arrow--left.nav-gray
+                .slider-arrow.slider-arrow--right.nav-gray
+
+            .p-videos__btn
+                a.btn-style.btn-style--fill-gray(href="#") Смотреть все работы
+
+    section.section-review
+
+        .container 
+
+            h2.reviews-title.section-title  ЧТО ГОВОРЯТ О КАЧЕСТВЕ РАБОТЫ НАШИ КЛИЕНТЫ
+
+            .review
+
+                .swiper
+
+                    .swiper-wrapper
+
+                        .review__slide.swiper-slide(href="assets/images/c19e1ed2.png" data-fancybox)
+                            img(src="assets/images/c19e1ed2.png", alt="img")
+
+                        .review__slide.swiper-slide(href="assets/images/26962e466366.png" data-fancybox)
+                            img(src="assets/images/26962e466366.png", alt="img")
+
+                        .review__slide.swiper-slide(href="assets/images/c19e1ed2.png" data-fancybox)
+                            img(src="assets/images/c19e1ed2.png", alt="img")
+
+                        .review__slide.swiper-slide(href="assets/images/26962e466366.png" data-fancybox)
+                            img(src="assets/images/26962e466366.png", alt="img")
+
+                .slider-navigation
+                    .slider-arrow.slider-arrow--left.nav-gray
+                    .slider-arrow.slider-arrow--right.nav-gray
+
+                .p-videos__btn
+                    a.btn-style.btn-style--fill-gray(href="#") Смотреть все работы

@@ -19,7 +19,7 @@ $(document).ready(function() {
         $('header').removeClass('header-backscroll')
       }
     })
-
+    
     let lastScrollTop = 0;
     $(window).scroll(function(){
         let currentScroll = $(this).scrollTop()
@@ -31,6 +31,7 @@ $(document).ready(function() {
         lastScrollTop = currentScroll
     })
 
+    // BEFORE AFTER IMG PLUGIN
     $(function(){
       $('.beforeAfter').beforeAfter({
         hoverOpacity: 1,
@@ -39,4 +40,13 @@ $(document).ready(function() {
         arrowColor:'#4F4E53'
       });
     });
+
+    // TABS
+    $('.tabs__item').on('click', function() {
+      $('.tabs__item').removeClass('active')
+      $(this).addClass('active')
+
+      $('[data-tabs').removeClass('active')
+      $(`[data-tabs][data-show=${$(this).attr('data-active')}]`).addClass('active')
+  })
 })

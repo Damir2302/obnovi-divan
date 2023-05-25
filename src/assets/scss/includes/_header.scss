@@ -159,6 +159,10 @@
     }
 }
 
+.nav::-webkit-scrollbar {
+    width: 0;
+}
+
 .nav.active {
     
     @include breakpointMax(lg) {
