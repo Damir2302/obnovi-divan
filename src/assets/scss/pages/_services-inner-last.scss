@@ -65,8 +65,11 @@
         transform: unset;
     }
 
-    .section-portfolio-videos {
+    .section-seo {
         --margin: -80px;
+        margin-bottom: var(--margin);
+        padding-top: 140px;
+        transform: translateY(var(--margin));
 
         @include breakpoint(lg) {
             --margin: -150px;
@@ -76,6 +79,20 @@
         @include breakpoint(xl) {
             --margin: -120px;
             padding-top: 220px;
+        }
+    }
+
+    .section-portfolio-videos {
+        margin-bottom: 0;
+        padding: 40px 0;
+        transform: unset;
+
+        @include breakpoint(lg) {
+            padding: 80px 0;
+        }
+
+        @include breakpoint(xl) {
+            padding: 100px 0;
         }
     }
 
