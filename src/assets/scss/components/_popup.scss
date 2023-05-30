@@ -99,7 +99,7 @@
 }
 
 #popup-calc {
-    padding: 75px 20px;
+    padding: 75px 20px 100px;
     max-width: 460px;
 
     @include breakpoint(lg) {
@@ -121,6 +121,10 @@
 
     .p-form__container {
         
+        @include breakpointMax(lg) {
+            position: relative;
+        }
+        
         @include breakpoint(lg) {
             display: flex;
         }
@@ -134,7 +138,11 @@
     }
 
     .agreement {
-        margin-top: 25px;
+
+        @include breakpointMax(lg) {
+            position: absolute;
+            top: calc(100% - 0px);
+        }
 
         @include breakpoint(lg) {
             margin-top: 57px;
