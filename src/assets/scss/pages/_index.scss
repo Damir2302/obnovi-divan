@@ -973,23 +973,30 @@
 .p-videos {
     padding: 0 16px;
     position: relative;
+
+    @include breakpoint(lg) {
+        text-align: center;
+    }
 }
 
 .p-videos__slide {
     padding: 20px;
     position: relative;
     max-width: 360px;
+    height: 227px;
     border: 1px solid #A4A4A3;
     border-radius: 30px;
     overflow: hidden;
 
     @include breakpoint(lg) {
         max-width: 472px;
+        height: 305px;
     }
 
     @include breakpoint(hd) {
         padding: 30px;
         max-width: 684px;
+        height: 443px;
     }
 }
 
@@ -1015,13 +1022,21 @@
     width: 60px;
     height: 60px;
     cursor: pointer;
+    opacity: 1;
+    transition: all .3s ease;
     z-index: 1;
+}
+
+.p-videos__slide.active .play-btn {
+    opacity: 0;
+    transform: scale(0);
 }
 
 .p-videos__slide video  {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: top;
     vertical-align: middle;
     border-radius: 15px;
 }
@@ -1044,6 +1059,7 @@
     @include breakpoint(lg) {
         margin-top: 50px;
         position: relative;
+        display: inline-block;
         z-index: 1;
     }
 }
