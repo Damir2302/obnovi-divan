@@ -154,8 +154,9 @@
     @include breakpoint(hd) {
         position: absolute;
         top: calc(50% - (27px / 2));
-        left: 0;
+        left: calc(50% - (768px / 2));
         width: 100%;
+        max-width: 768px;
     }
 }
 
